@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+     <html>
+	     <head> 
+		     <title> WELCOME </title>
+			 <meta charset="UTF-8">
+			 <link rel="stylesheet" type="text/css" href="new 1.css"/>
+		</head> 
+		
+		<body style="background-color:aqua;"> 
+	          <h1 style="text-align:center; font-family:Ink Free;"> WELCOME Mr.Lenin<br/> 
+			  <marquee bgcolor="yellow"> ...ATI MAYA(behhh)...     </marquee>      </h1>
+			  <p style="font-family:courier;"title=Hai lenin> hai <font color="red" size="7">d</font>ude this is a lenin from vizag and <b>I am completed my Graduation of </b><font color="red" size="7">b</font> <b>tech</b>....</p>
+			  
+			   <img src="IMG-20201108-WA0003.jp
+			  " alt="dudes"/>
+			
+			
+		                
+		</body>
+		 
+	 </html>
