@@ -1,0 +1,129 @@
+import java.io.*;
+import java.util.Date;
+import java.util.Scanner;
+ class A {
+     int x=20000;
+     void width() {
+    	 System.out.println("ENTER AMOUNT DO YOU WANT TO WITHDRAW");
+    	 Scanner ch=new Scanner(System.in);
+    	 int y=ch.nextInt();
+    	 if(y>x) {
+    		 System.out.println("TRANSACTION FAILED");
+    		 System.exit(0);
+    	 }else {
+    		 System.out.println("ENTER PURPOSE");
+            
+    		 String p=ch.next();
+    		 x=x-y;
+    		 System.out.println("YOUR WITHDRAW AMOUNT IS" +y);
+    		 System.out.println("€€	TRANSACTION SUCCESSFUL €€");
+              Date z=new Date();
+              String to=z.toString();
+              try {
+            	 FileWriter fw =new  FileWriter("abc.txt",true);
+            	 BufferedWriter f= new BufferedWriter(fw);
+            	 f.write(to);
+            	 f.write(p);
+            	 f.newLine();
+            	 f.close();
+            	 f.flush();
+              }
+              catch(Exception e) {
+            	  e.printStackTrace();  
+            	 }
+              }
+    		 }
+    	 }
+ class B extends A{
+	 
+	void dep() {
+		System.out.println("ENTER AMOUNT DO YOU WANT TO DEPOSITE");
+		Scanner t=new Scanner(System.in);
+		int i=t.nextInt();
+		x=x+i;
+		System.out.println("€€ YOUR DEPOSITE IS SAFELY DONE €€ ");
+	}
+	void ch() {
+		System.out.println("AMOUNT IS " +x);
+		
+	}	
+	/*
+	void hn() {
+		try {
+			Desktop d=Desktop.getDesktop();
+			d.browse(new URI("https://www.bankbazaar.com/personal-loan-customer-care.html"));
+		}
+		catch(Exception e) {
+		  e.printStackTrace();
+		}
+		*/  
+		void mini() {
+		   try {
+	         FileReader fr=new FileReader("abc.txt");
+	         BufferedReader br=new BufferedReader(fr);
+	         String line=br.readLine();
+               while(line!=null){
+                   System.out.println("details are:" +line);
+                   line=br.readLine();
+                       
+               }
+		   }
+		   catch(Exception e) {
+			   
+		}
+		}
+		   void m() {
+			   int o;
+			   int h=1234;
+			   Scanner m=new Scanner(System.in);
+			   System.out.println("ENTER YOUR PASSWORD");
+			   int c=m.nextInt();
+			     try {
+				   Thread.sleep(1000);
+			   }catch(Exception e) {
+				e.printStackTrace();
+			   }
+			   if(c==h) {
+				   System.out.println("WELCOME TO MY ATM");
+				 while(true) {
+					Scanner t=new Scanner(System.in);
+					System.out.println("1.Widthdraw");
+					System.out.println("2.deposite");
+					System.out.println("3.check balance");
+					System.out.println("4.mini Statement");
+					System.out.println("5.exit");
+					
+					int j=t.nextInt();
+					switch(j) {
+					case 1:width();
+					break;
+					case 2:dep();
+					break;
+					case 3:ch();
+					break;
+				/*	
+					case 4:hn();
+					break;
+					*/
+					case 4:mini();
+					break;
+					case 5:System.exit(0);
+					break;
+					default:
+						System.out.println("Invalid");
+					}	
+					}
+			   }
+			   else {
+				   System.out.println("Wrong password");
+			   }
+			   }
+		   }
+		
+class AtmProject{
+	public static void main(String args[]) {
+		B obj=new B();
+		obj.m();
+		
+	}
+}
